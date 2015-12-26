@@ -1,0 +1,19 @@
+div.breadcrumbs
+  == breadcrumbs
+div.large-image
+  img src=images.first.url
+  div.image-information
+    div.image-info
+      div.title Name
+      div.body #{name}
+    div.image-info
+      div.title Metadata
+      div.body #{metadata || 'None'}
+    div.image-info
+      div.title Qualities
+      div.body
+        ol
+          - images.each do |image|
+            li
+              a href=image.url target="_blank"
+                | #{image.name}

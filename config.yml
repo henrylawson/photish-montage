@@ -1,0 +1,8 @@
+---
+qualities:
+  - name: Original
+    params: []
+  - name: Photo
+    params: ['-resize', '1280x1024']
+  - name: Gallery
+    params: ['-resize', '800x600']

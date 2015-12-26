@@ -1,0 +1,12 @@
+div.breadcrumbs
+  == breadcrumbs
+div.am-container
+  - albums.each do |album|
+    a href=album.url
+      - cover_photo = album.photos.second.images.find{|i| i.quality_name=='Gallery'}
+      img src=cover_photo.url
+      span.image-title #{album.name.upcase}
+div.am-container
+  - all_photos.each do |photo|
+    a href=photo.url
+      img src=photo.images.second.url

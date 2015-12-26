@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Photish
+    link media="screen" rel="stylesheet" type="text/css" href="/styles/basic.css"
+    link media="screen" rel="stylesheet" type="text/css" href="/styles/montage.css"
+  body
+    div.wrapper
+      div.title-bar
+        a href="/" PHOTISH
+      == yield
+      div.push
+    div.footer
+      p
+        | PHOTISH Example Site, Montage effect by&nbsp;
+        a target="_blank" href="http://tympanus.net/codrops/2011/08/30/automatic-image-montage/" Tympanus
+        | .
+    script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    script type="text/javascript" src="/js/jquery.montage.min.js"
+    script type="text/javascript" src="/js/montage.js"

@@ -1,7 +1,7 @@
 # Photish Demo
 
 This is a demo site to showcase what you can do with
-[Photish](https://github.com/henrylawson/photish) can generate.
+[Photish](https://github.com/henrylawson/photish).
 
 ## Demo URL
 

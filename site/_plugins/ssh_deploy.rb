@@ -30,7 +30,7 @@ class Photish::Plugin::SshDeploy
     log.info "Extracting site to publish temp location"
     execute("ssh #{host} -v " +
             "'tar -zxvf " +
-            "#{upload_temp_dir}/#{output_dir_compress_file} " +
+            "#{upload_temp_dir}/#{output_dir_compress_filename} " +
             "-C #{publish_temp_dir}'")
 
     log.info "Moving publish temp to publish folder"
@@ -40,6 +40,8 @@ class Photish::Plugin::SshDeploy
             "rm -rf #{publish_dir}/* && " +
             "cp -rf #{publish_temp_dir}/* #{publish_dir}\"'")
     log.info "#{Time.new}: Deployment complete"
+  ensure
+    FileUtils.rm_rf(output_dir_compress_file)
   end
 
   private
@@ -58,8 +60,13 @@ class Photish::Plugin::SshDeploy
           :www_user,
           to: :deploy
 
-  def output_dir_compress_file
+  def output_dir_compress_filename
     'output_dir.tar.gz'
+  end
+
+  def output_dir_compress_file
+    @output_dir_compress_file ||= File.join(Dir.mktmpdir,
+                                            output_dir_compress_filename)
   end
 
   def self.is_for?(type)

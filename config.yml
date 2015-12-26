@@ -6,3 +6,9 @@ qualities:
     params: ['-resize', '1280x1024']
   - name: Gallery
     params: ['-resize', '800x600']
+deploy:
+  host: foinq.com
+  publish_dir: /srv/www/foinq.com/photish-montage
+  publish_temp_dir: /tmp/photish-montage-publish
+  upload_temp_dir: /tmp/photish-montage-upload
+  www_user: www-fqc

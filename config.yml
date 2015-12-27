@@ -15,3 +15,4 @@ deploy:
   publish_temp_dir: /tmp/photish-montage-publish
   upload_temp_dir: /tmp/photish-montage-upload
   www_user: www-fqc
+plugins: ['photish/plugin/sshdeploy']

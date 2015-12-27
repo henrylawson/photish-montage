@@ -1,3 +1,4 @@
 source "https://rubygems.org"
 
-gem "photish"
+gem "photish"                  # ,path: '../../photish'
+gem "photish-plugin-sshdeploy" # ,path: '../../photish-plugin-sshdeploy'

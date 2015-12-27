@@ -2,12 +2,12 @@ doctype html
 html
   head
     title Photish
-    link media="screen" rel="stylesheet" type="text/css" href="/styles/basic.css"
-    link media="screen" rel="stylesheet" type="text/css" href="/styles/montage.css"
+    link media="screen" rel="stylesheet" type="text/css" href=build_url('styles', 'basic.css')
+    link media="screen" rel="stylesheet" type="text/css" href=build_url('styles', 'montage.css')
   body
     div.wrapper
       div.title-bar
-        a href="/" PHOTISH
+        a href=build_url("/") PHOTISH
       == yield
       div.push
     div.footer
@@ -16,5 +16,5 @@ html
         a target="_blank" href="http://tympanus.net/codrops/2011/08/30/automatic-image-montage/" Tympanus
         | .
     script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
-    script type="text/javascript" src="/js/jquery.montage.min.js"
-    script type="text/javascript" src="/js/montage.js"
+    script type="text/javascript" src=build_url('js', 'jquery.montage.min.js')
+    script type="text/javascript" src=build_url('js', 'montage.js')

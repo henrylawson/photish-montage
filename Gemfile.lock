@@ -20,7 +20,7 @@ GEM
     mini_exiftool (2.5.1)
     mini_magick (4.3.6)
     minitest (5.8.3)
-    photish (0.4.0)
+    photish (0.5.0)
       activesupport (~> 4.2)
       colorize (~> 0.7.7)
       facter (~> 2.4)
@@ -42,7 +42,7 @@ GEM
     temple (0.7.6)
     thor (0.19.1)
     thread_safe (0.3.5)
-    tilt (2.0.1)
+    tilt (2.0.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
